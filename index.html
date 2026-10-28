@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="google" content="notranslate">
+  <title>Desempeño Editorial — Revista AXXIS</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@stlite/browser@1.10.0/build/stlite.css">
+  <style>
+    body { margin: 0; background: #F4F6FA; font-family: Rubik, Arial, sans-serif; }
+    #cargando { min-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+                gap: 14px; color: #231815; font-size: 1.05rem; text-align: center; padding: 16px; }
+    #cargando small { color: #5F6467; }
+  </style>
+</head>
+<body>
+  <div id="root"><div id="cargando"><img src="./assets/axxis_negro.svg" alt="Revista AXXIS" style="height:34px">
+    <div>Desempeño Editorial</div><small>Abriendo el panel. La primera vez tarda cerca de un minuto: el panel se arma en el navegador.</small></div></div>
+  <script type="module">
+    import { mount } from "https://cdn.jsdelivr.net/npm/@stlite/browser@1.10.0/build/stlite.js";
+    mount({
+      requirements: ["plotly==6.9.0", "pandas", "numpy", "pillow"],
+      entrypoint: "app/main.py",
+      files: {
+        "app/avatares.py": { url: "./app/avatares.py" },
+        "app/calculos.py": { url: "./app/calculos.py" },
+        "app/datos.py": { url: "./app/datos.py" },
+        "app/estilos.py": { url: "./app/estilos.py" },
+        "app/general.py": { url: "./app/general.py" },
+        "app/google_updates.py": { url: "./app/google_updates.py" },
+        "app/graficos.py": { url: "./app/graficos.py" },
+        "app/individual.py": { url: "./app/individual.py" },
+        "app/main.py": { url: "./app/main.py" },
+        "app/notas.py": { url: "./app/notas.py" },
+        "app/secciones.py": { url: "./app/secciones.py" },
+        "app/semaforo.py": { url: "./app/semaforo.py" },
+        "app/titulares.py": { url: "./app/titulares.py" },
+        "app/ui.py": { url: "./app/ui.py" },
+        "data/processed/consultas.json": { url: "./data/processed/consultas.json" },
+        "data/processed/notas.json": { url: "./data/processed/notas.json" },
+        "data/processed/notas_mes.json": { url: "./data/processed/notas_mes.json" },
+        "data/processed/seo_notas.json": { url: "./data/processed/seo_notas.json" },
+        "data/processed/sitio.json": { url: "./data/processed/sitio.json" },
+        "assets/axxis_blanco.svg": { url: "./assets/axxis_blanco.svg" },
+        "assets/axxis_negro.svg": { url: "./assets/axxis_negro.svg" },
+        ".streamlit/config.toml": { url: "./config.toml" }
+      },
+    }, document.getElementById("root"));
+  </script>
+</body>
+</html>
