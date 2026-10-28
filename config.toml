@@ -32,6 +32,3 @@ headless = true
 
 [client]
 toolbarMode = "minimal"
-
-[client]
-toolbarMode = "minimal"
